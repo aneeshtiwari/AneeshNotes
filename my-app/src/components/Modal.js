@@ -30,18 +30,25 @@ const Modal = (props) => {
     localStorage.setItem("aneesh-notes", JSON.stringify(temp));
   };
   return (
-    <div>
-      <div>My text</div>
+    <div style={{ margin: "10px" }}>
+      <div style={{ marginLeft: "300px", marginBottom: "10px" }}>My text</div>
       <div style={{ display: "flex" }}>
-        <div>write here</div>
+        <div style={{ marginRight: "30px" }}>Write here</div>
         <input
           value={selected.name}
           onChange={(e) => setSelected({ ...selected, name: e.target.value })}
         ></input>
       </div>
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          marginBottom: "10px",
+          marginTop: "10px",
+        }}
+      >
         <span>Chose color</span>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", marginLeft: "20px" }}>
           <div
             class="circular"
             style={{
